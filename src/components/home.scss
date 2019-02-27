@@ -1,0 +1,42 @@
+.home{
+    width: 100%;
+    height: 100%;
+    &> .el-table {
+        // /deep/ tr td{
+        //     background: #cccccc;
+        // }
+        
+        /deep/ tr td {
+            padding: 0px;
+            border: none;
+            background: #cccccc;
+            height: 50px;
+            .cell {
+                padding: 0px;
+                &>div:nth-child(1) {
+                    height: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .el-button{
+                        padding: 5px;
+                    }
+                }
+            }
+            .el-table tr td {
+                background: red;
+            }
+        }
+        .el-table::before {
+            height: 0px;
+        }
+        /deep/ .el-table tr td .cell>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .el-button{
+                padding: 5px;
+            }
+        }
+    }
+}
